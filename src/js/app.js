@@ -1,12 +1,10 @@
-const APP = document.querySelector('#app');
 const INPUT = document.querySelector('#password');
-let password;
 
 INPUT.addEventListener('keyup', e => {
 	if(e.keyCode !== 13) return;
 
 	let correctPassword = true;
-	password = INPUT.value;
+	let password = INPUT.value;
 
 	// Check if length is greater than 8 characters
 	if(!/[^]{8,}/.test(password))
