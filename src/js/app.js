@@ -1,6 +1,11 @@
 const INPUT = document.querySelector('#password');
+const HINTBLOCK = document.querySelector('#hintBlock');
 
 INPUT.addEventListener('keyup', e => {
+	INPUT.removeAttribute('class');
+	INPUT.classList.add('password__input');
+	HINTBLOCK.classList.add('hidden');
+
 	if(e.keyCode !== 13) return;
 
 	let correctPassword = true;
@@ -22,8 +27,11 @@ INPUT.addEventListener('keyup', e => {
 	if(!/[a-z]/.test(password)) 
 		correctPassword = false;
 
-	if(correctPassword)
-		INPUT.style.borderColor = 'limegreen';
-	else
-		INPUT.style.borderColor = 'red';
+	if(correctPassword) {
+		INPUT.classList.add('password__input--correct');
+		HINTBLOCK.classList.add('hidden');
+	} else {
+		INPUT.classList.add('password__input--incorrect');
+		HINTBLOCK.classList.remove('hidden');
+	}
 });

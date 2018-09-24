@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const minify = require('gulp-minify');
+const clean = require('gulp-clean');
 const browserSync = require('browser-sync').create();
 
 gulp.task('sass', () => {
@@ -17,15 +18,16 @@ gulp.task('minify-css', () => {
 	.pipe(gulp.dest('css/'));
 });
 
-gulp.task('minify-js', function() {
+gulp.task('minify-js', () => {
 	gulp.src(['src/js/app.js'])
-	.pipe(minify({
-		ext: {
-			min: '.js',
-		},
-	}))
+	.pipe(minify())
 	.pipe(gulp.dest('js/'))
 	.pipe(browserSync.stream());
+});
+
+gulp.task('gulp-clean', () => {
+	return gulp.src('js/app.js')
+	.pipe(clean({force: true}));
 });
 
 gulp.task('browser-sync', function() {
@@ -36,7 +38,8 @@ gulp.task('browser-sync', function() {
 	gulp.watch("src/sass/index.scss", ['sass']);
 	gulp.watch("css/index.css", ['minify-css']);
 	gulp.watch("src/js/app.js", ['minify-js']);
+	gulp.watch("js/app-min.js", ['gulp-clean']);
 	gulp.watch("index.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['sass', 'minify-js', 'browser-sync']);
+gulp.task('default', ['sass', 'minify-js', 'gulp-clean', 'browser-sync']);
