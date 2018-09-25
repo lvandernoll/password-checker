@@ -28,7 +28,7 @@
 	}
 }
 
-.password-hints {
+.password-hint {
 
 	&__block {
 		display: flex;
@@ -43,6 +43,14 @@
 		margin-top: 110px;
 		margin-left: 63px;
 		font-size: .8rem;
+	}
+
+	&__text {
+		color: green;
+
+		&--incorrect {
+			color: red;
+		}
 	}
 }
 

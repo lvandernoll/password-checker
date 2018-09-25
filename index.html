@@ -10,13 +10,13 @@
 	<div class="page__wrapper">
 		<label for="password">Enter password:</label>
 		<input id="password" class="password__input" name="password" type="text" placeholder="Password"/>
-		<div id="hintBlock" class="password-hints__block hidden">
+		<div id="hintBlock" class="password-hint__block hidden">
 			<p>Your password must contain:</p>
-			<p>At least 8 characters</p>
-			<p>At least 1 special character</p>
-			<p>At least 2 numbers</p>
-			<p>At least 1 uppercase letter</p>
-			<p>At least 1 lowercase letter</p>
+			<p class="password-hint__text" id="lengthHint">At least 8 characters</p>
+			<p class="password-hint__text" id="specialHint">At least 1 special character</p>
+			<p class="password-hint__text" id="numberHint">At least 2 numbers</p>
+			<p class="password-hint__text" id="uppercaseHint">At least 1 uppercase letter</p>
+			<p class="password-hint__text" id="lowercaseHint">At least 1 lowercase letter</p>
 		</div>
 	</div>
 	<script src="js/app-min.js"></script>
