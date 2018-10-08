@@ -1,4 +1,1 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Ubuntu'; }
+*{margin:0;padding:0;font-family:Ubuntu}.page__wrapper{width:100%;padding-top:10%;display:flex;justify-content:center;align-items:center}.password__input{outline:0;margin-left:1%;padding:5px}.password__input--correct{border-color:#32cd32;background-color:#d4ffd4}.password__input--incorrect{border-color:red;background-color:#ffd4d4}.password-hint__block{display:flex;justify-content:space-evenly;flex-direction:column;background-color:#f6f6f6;border:1px solid #ccc;padding:5px;height:150px;width:184px;position:absolute;margin-top:110px;margin-left:63px;font-size:.8rem}.password-hint__text{color:green}.password-hint__text--incorrect{color:red}.hidden{display:none}

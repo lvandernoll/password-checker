@@ -1,21 +1,21 @@
 {
-  "name": "calendar",
+  "name": "password-checker",
   "version": "1.0.0",
-  "description": "A basic calendar for Competa",
+  "description": "A basic password checker for Competa",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lvandernoll/calendar.git"
+    "url": "git+https://github.com/lvandernoll/password-checker.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lvandernoll/calendar/issues"
+    "url": "https://github.com/lvandernoll/password-checker/issues"
   },
-  "homepage": "https://github.com/lvandernoll/calendar#readme",
+  "homepage": "https://github.com/lvandernoll/password-checker#readme",
   "devDependencies": {
     "browser-sync": "^2.24.7",
     "gulp": "^3.9.1",
